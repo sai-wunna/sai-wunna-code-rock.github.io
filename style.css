@@ -1,0 +1,100 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+body:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 60%;
+  width: 10%;
+  height: 100%;
+  background-color: #bfbfbf;
+}
+
+.container {
+  min-width: 300px;
+  margin: 0 auto;
+  background-color: #ffffff67;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 100;
+}
+
+#result {
+  height: 30px;
+  font-size: 26px;
+  margin-bottom: 20px;
+  background-color: #eeeeeeb1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#condition {
+  height: 20px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  background-color: #eeeeeeb1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #bababa;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #8a8a8a;
+}
+
+button:active {
+  background-color: #ffffff;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  body:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 60%;
+    width: 20%; /* Adjust the width of the line as needed */
+    height: 100%;
+    background-color: #bfbfbf; /* Adjust the color of the line as needed */
+  }
+  .container {
+    max-width: 90%;
+    min-width: 250px;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  button {
+    margin: 10px auto;
+    padding: 10px 50px;
+    display: block;
+  }
+  #result {
+    max-width: 250px;
+    font-size: 28px;
+  }
+}
